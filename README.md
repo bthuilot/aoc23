@@ -7,7 +7,7 @@
 2. [Tests](#Tests)
 3. [Completed Days](#Completed-Days)
 
-This repositories stores my solutions in OCaml to [Advent of Code 2022](https://adventofcode.com/2023).
+This repositories stores my solutions in OCaml to [Advent of Code 2023](https://adventofcode.com/2023).
 
 For more info on the approach to each day,
 read the module header comment located at the top of each day's source file 
