@@ -22,3 +22,6 @@ class t =
 
 let%test_unit "part1" =
   [%test_result:string] ((new t)#part1 "test") ~expect:"test"
+
+let%test_unit "part2" =
+  [%test_result:string] ((new t)#part2 "test") ~expect:"TEST"
