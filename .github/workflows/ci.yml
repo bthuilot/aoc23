@@ -1,4 +1,5 @@
-name: Builds, tests & co
+name: >
+  [CI] Test
 
 on:
   pull_request:
@@ -15,12 +16,12 @@ env:
 
 jobs:
   ci:
-    runs-on: [linux]
+    runs-on: [ubuntu-latest]
     steps:
       - name: Checkout tree
         uses: actions/checkout@v4
 
-      - name: Set-up OCaml ${{ matrix.ocaml-compiler }}
+      - name: Set-up OCaml ${{ env.OCAML_COMPILER_VER }}
         uses: ocaml/setup-ocaml@v2
         with:
           ocaml-compiler: ${{ env.OCAML_COMPILER_VER }}
