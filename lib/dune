@@ -1,0 +1,5 @@
+(include_subdirs unqualified)
+
+(library
+ (name advent_of_code_2023)
+ (libraries core))
