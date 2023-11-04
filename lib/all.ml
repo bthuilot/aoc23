@@ -2,29 +2,29 @@
 let days : Day.t list =
   [
     new Day00.t;
-    (* new day1; *)
-    (* new day2; *)
-    (* new day3; *)
-    (* new day4; *)
-    (* new day5; *)
-    (* new day6; *)
-    (* new day7; *)
-    (* new day8; *)
-    (* new day9; *)
-    (* new day11; *)
-    (* new day11; *)
-    (* new day12; *)
-    (* new day13; *)
-    (* new day14; *)
-    (* new day15; *)
-    (* new day16; *)
-    (* new day17; *)
-    (* new day18; *)
-    (* new day19; *)
-    (* new day20; *)
-    (* new day21; *)
-    (* new day22; *)
-    (* new day23; *)
-    (* new day24; *)
-    (* new day25 *)
+    new Day01.t;
+    new Day02.t;
+    new Day03.t;
+    new Day04.t;
+    new Day05.t;
+    new Day06.t;
+    new Day07.t;
+    new Day08.t;
+    new Day09.t;
+    new Day11.t;
+    new Day11.t;
+    new Day12.t;
+    new Day13.t;
+    new Day14.t;
+    new Day15.t;
+    new Day16.t;
+    new Day17.t;
+    new Day18.t;
+    new Day19.t;
+    new Day20.t;
+    new Day21.t;
+    new Day22.t;
+    new Day23.t;
+    new Day24.t;
+    new Day25.t
   ]

@@ -12,6 +12,7 @@ class virtual t (num: int) =
             let part2 = self#part2 input in
             Printf.printf "Day %d:\n" num;
             Printf.printf "  part 1: %s" part1;
+            Printf.printf "\n";
             Printf.printf "  part 2: %s" part2;
             Printf.printf "\n"
           
