@@ -1,6 +1,6 @@
 class t =
   object (_)
-    inherit Day.t 18
+    inherit Day_intf.t 10
     method part1 (_ : string) : string = "Not Implemented"
     method part2 (_ : string) : string = "Not Implemented"
   end
