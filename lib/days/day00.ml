@@ -9,7 +9,7 @@ open! Core
 
 class t =
   object (_)
-    inherit Day.t 0
+    inherit Day_intf.t 0
     (** [part1 input] is the solution to part1 of this day's puzzle.
         [input] is the input data, which is capitlaized.
      *)

@@ -1,5 +1,4 @@
-
-let days : Day.t list =
+let days: Day_intf.t list =
   [
     new Day00.t;
     new Day01.t;
