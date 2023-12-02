@@ -12,7 +12,6 @@ depends: [
   "ocaml"
   "dune" {>= "3.7"}
   "core"
-  "str"
   "alcotest" {with-test}
   "odoc" {with-doc}
 ]
