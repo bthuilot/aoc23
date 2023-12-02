@@ -11,7 +11,7 @@
 
 (maintainers "Bryce Thuilot <bryce@thuilot.io>")
 
-(license GPL-3)
+(license GPL-3.0)
 
 (homepage https://github.com/bthuilot/aoc23)
 
@@ -19,7 +19,7 @@
  (name advent_of_code_2023)
  (synopsis "Advent of Code '23")
  (description "Implmenetion of Advent of Code 2023 solutions in OCaml")
- (depends ocaml dune core)
+ (depends ocaml dune core (alcotest :with-test))
  (tags
   (aoc23 "advent of code")))
 
