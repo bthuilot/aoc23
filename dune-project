@@ -19,7 +19,7 @@
  (name advent_of_code_2023)
  (synopsis "Advent of Code '23")
  (description "Implmenetion of Advent of Code 2023 solutions in OCaml")
- (depends ocaml dune core)
+ (depends ocaml dune core alcotest)
  (tags
   (aoc23 "advent of code")))
 
