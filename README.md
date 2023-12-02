@@ -1,6 +1,5 @@
 # Advent of Code 2023 - OCaml
 
-
 ### Index
 
 1. [Building/Running](#Buidling/Running)
@@ -16,17 +15,22 @@ read the module header comment located at the top of each day's source file
 
 ## Building/Running
 
-This project leverages dune (and Make) to compile and run the project, to build an executable simply run
+This project leverages dune to compile and run the project, to build an executable simply run
 
 ```bash
+dune exec aoc23
+# or
 make
-# or 
-dune exec advent_of_code
+
+# Optionally specify only a subset of days to run
+dune exec aoc23 1 8 23 # Run days 1, 8 and 23
 ```
 
 ## Tests
 
-To test functionaility of the project, There exists a test suite that can be run by invoking
+Tests are written using [alcotest](https://github.com/mirage/alcotest).
+
+To test functionaility of the project, invoke the following:
 
 ```bash
 make test
@@ -38,4 +42,5 @@ dune runtest
 
 Below is an index to every completed day's implementation source code (containing documentation of approach) and the challenge for the day
 
-- [Day 0](lib/day00.ml) : *This is a test day supposed to server a placeholder until the challenge starts*
+- [Day 0](lib/days/day00.ml) : *This is a test day supposed to server a placeholder until the challenge starts*
+- [Day 1](lib/days/day01.ml) : [Problem](https://adventofcode.com/2023/day/1)
