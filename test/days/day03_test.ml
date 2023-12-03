@@ -20,7 +20,7 @@ let test_part1 () =
 
 
 let test_part2 () =
-  let expected = "2286" in
+  let expected = "467835" in
   let actual = day#part2 input in
   check string "part2 is valid" expected actual
 
