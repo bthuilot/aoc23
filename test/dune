@@ -3,4 +3,4 @@
 (test
  (name aoc23_test)
  (libraries advent_of_code_2023 core alcotest)
- (modules Aoc23_test Day00_test Day01_test Day02_test Day03_test Day04_test Day05_test))
+ (modules Aoc23_test Day00_test Day01_test Day02_test Day03_test Day04_test Day05_test Day06_test))
