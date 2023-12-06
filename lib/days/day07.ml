@@ -1,3 +1,9 @@
+(** Day 7:
+
+    https://adventofcode.com/2023/day/7
+
+ *)
+
 class t =
   object (_)
     inherit Day_intf.t 7
