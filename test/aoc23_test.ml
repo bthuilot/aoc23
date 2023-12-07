@@ -7,4 +7,5 @@ let () =
       "Day 4", Day04_test.suite;
       "Day 5", Day05_test.suite;
       "Day 6", Day06_test.suite;
+      "Day 7", Day07_test.suite;
     ]

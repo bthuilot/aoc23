@@ -1,18 +1,22 @@
 open Alcotest
 
-let day = new Advent_of_code_2023.Day00.t
+let day = new Advent_of_code_2023.Day07.t
 
-let i = {|test|}
+let input = {|32T3K 765
+T55J5 684
+KK677 28
+KTJJT 220
+QQQJA 483|}
 
 let test_part1 () =
-  let expected = "test" in
-  let actual = day#part1 i in
+  let expected = "6440" in
+  let actual = day#part1 input  in
   check string "part1 is valid" expected actual
 
 
 let test_part2 () =
-  let expected = "TEST" in
-  let actual = day#part2 i in
+  let expected = "5905" in
+  let actual = day#part2 input in
   check string "part2 is valid" expected actual
 
  
