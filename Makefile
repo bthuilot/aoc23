@@ -12,7 +12,7 @@ test:
 generate_test:
 	@read -p "Enter day #: " DAY; \
 	day=$$(printf %02d $$DAY); \
-	@cp test/days/day00_test.ml test/days/day$${day}_test.ml; \
-	sed -i "s/Day00/Day$${day}/g" test/days/day00_test.mll; \
+	cp test/days/day00_test.ml "test/days/day$${day}_test.ml"; \
+	sed -i "s/Day00/Day$${day}/g" "test/days/day$${day}_test.ml"; \
 	sed -i "s/))/ Day$${day}_test))/" test/dune; \
 	sed -i "s/\([ \t]*\)]/\1  \"Day $${DAY}\", Day$${day}_test.suite;\n)/" test/aoc23.ml
