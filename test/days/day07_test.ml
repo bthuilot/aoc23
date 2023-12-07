@@ -2,10 +2,14 @@ open Alcotest
 
 let day = new Advent_of_code_2023.Day07.t
 
-let input = {||}
+let input = {|32T3K 765
+T55J5 684
+KK677 28
+KTJJT 220
+QQQJA 483|}
 
 let test_part1 () =
-  let expected = "Not yet published" in
+  let expected = "6440" in
   let actual = day#part1 input  in
   check string "part1 is valid" expected actual
 
