@@ -9,9 +9,10 @@ build:
 test:
 	@dune runtest
 
-DAY_NUM ?= $(shell bash -c 'read -s -p "day #: " dn; echo $$dn')
-
 generate_test:
-	@echo Day number › $(DAY_NUM)
-	@cp test/days/day00_test.ml test/days/day$(DAY_NUM)_test.ml
-
+	@read -p "Enter day #: " DAY; \
+	day=$$(printf %02d $$DAY); \
+	@cp test/days/day00_test.ml test/days/day$${day}_test.ml; \
+	sed -i "s/Day00/Day$${day}/g" test/days/day00_test.mll; \
+	sed -i "s/))/ Day$${day}_test))/" test/dune; \
+	sed -i "s/\([ \t]*\)]/\1  \"Day $${DAY}\", Day$${day}_test.suite;\n)/" test/aoc23.ml
