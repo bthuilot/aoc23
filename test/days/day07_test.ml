@@ -15,7 +15,7 @@ let test_part1 () =
 
 
 let test_part2 () =
-  let expected = "Not yet published" in
+  let expected = "5905" in
   let actual = day#part2 input in
   check string "part2 is valid" expected actual
 
