@@ -16,4 +16,5 @@ generate_test:
 	cp test/days/day00_test.ml $${test_file}; \
 	sed -i '' "s/Day00/Day$${day}/g" $${test_file}; \
 	sed -i '' "s/))/ Day$${day}_test))/" test/dune; \
-	sed -i '' "s/\(\ *\)]/\1  \"Day $${DAY}\", Day$${day}_test.suite;\n)/" test/aoc23_test.ml
+	sed -r -i '' -e "s/([[:space:]]+)\]/\1  \"Day 9\", Day09_test.suite\;\n\1]/" test/aoc23_test.ml
+
