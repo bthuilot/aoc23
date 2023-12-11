@@ -10,7 +10,7 @@ let days: Day_intf.t list =
     new Day07.t;
     new Day08.t;
     new Day09.t;
-    new Day11.t;
+    new Day10.t;
     new Day11.t;
     new Day12.t;
     new Day13.t;
