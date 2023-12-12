@@ -24,18 +24,18 @@ L|-JF|}
 let test_part_example1 () =
   let expected = "4" in
   let actual = day#part1 example_1 in
-  check string "part1 is valid" expected actual
+  check string "part1 example 1 is valid" expected actual
 
 let test_part_example2 () =
   let expected = "8" in
   let actual = day#part1 example_2 in
-  check string "part1 is valid" expected actual
+  check string "part1 example 2is valid" expected actual
 
 
 let test_part_example3 () =
   let expected = "4" in
   let actual = day#part1 example_3 in
-  check string "part1 is valid" expected actual
+  check string "part1 example 3 is valid" expected actual
 
 let example_4 = {|...........
 .S-------7.
@@ -61,13 +61,13 @@ L7JLJL-JLJLJL--JLJ.L|}
 let test_part2_example4 () =
   let expected = "4" in
   let actual = day#part2 example_4 in
-  check string "part2 is valid" expected actual
+  check string "part2 example 4 is valid" expected actual
 
 
 let test_part2_example5 () =
   let expected = "10" in
   let actual = day#part2 example_5 in
-  check string "part2 is valid" expected actual
+  check string "part2 example 5 is valid" expected actual
 
  
 let suite =
