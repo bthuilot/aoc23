@@ -1,5 +1,7 @@
 (** Day 4: Scatrchcard
 
+    http://adventofcode.com/2023/day/4
+
     This day turned out to be a lot easier than yesterday.
     As with the other days in this year, I first parse the input
     into a type that can be used for both days. In this case a record

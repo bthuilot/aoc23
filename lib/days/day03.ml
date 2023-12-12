@@ -1,5 +1,6 @@
 (** Day 3: Gear Ratios
-    https://adventofcode.com/2019/day/3
+    
+    https://adventofcode.com/2023/day/3
 
     This problem is a bit of a mess as im still trying to get used to OCaml.
     My initial solutions were very imperative, so my final one uses a bit more
