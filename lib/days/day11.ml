@@ -1,5 +1,7 @@
 (** Day 11: Cosmic Expansion
 
+    https://adventofcode.com/2023/day/11
+
     This one was a easy one (thank god after yesterday's mess).
     I simply went through the input and found all the galaxies.
     every time I found a galaxy I added it to a list of galaxies,

@@ -1,7 +1,7 @@
 
 (** Advent of Code - Day 2
 
-    https://adventofcode.com/2020/day/2
+    https://adventofcode.com/2023/day/2
 
     This day involves parsing game results and calculating
     first the game IDs of possible games, and then the
