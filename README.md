@@ -54,3 +54,5 @@ Below is an index to every completed day's implementation source code (containin
 - [Day 9](lib/days/day09.ml) : [Problem](https://adventofcode.com/2023/day/9)
 - [Day 10](lib/days/day10.ml) : [Problem](https://adventofcode.com/2023/day/10)
 - [Day 11](lib/days/day11.ml) : [Problem](https://adventofcode.com/2023/day/11)
+- Day 12 : [Problem](https://adventofcode.com/2023/day/12)
+- [Day 13](lib/days/day13.ml) : [Problem](https://adventofcode.com/2023/day/13)
