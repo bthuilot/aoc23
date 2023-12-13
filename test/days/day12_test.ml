@@ -16,15 +16,20 @@ let test_part1 () =
 
 
 let test_part2 () =
-  let expected = "TEST" in
+  let expected = "525152" in
   let actual = day#part2 i in
   check string "part2 is valid" expected actual
 
+let test_quick () =
+  let expected = "5" in
+  let actual = day#part1 ".?.?..?????.?# 1,1,3,1" in
+  check string "u good" expected actual
  
 let suite =
   [
     "part1", `Quick, test_part1;
     "part2", `Quick, test_part2;
+    (* "testing" , `Quick, test_quick; *)
   ]
 
 
