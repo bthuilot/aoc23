@@ -18,3 +18,13 @@ let rec drop i l =
 (** [take i l] returns the first [i] elements of the list [l]. *)
 let rec take i l =
   if i = 0 then [] else (List.hd l) :: take (i - 1) (List.tl l)
+
+
+(** [transpose] transposes a matrix.
+    This is used to convert rows to columns and vice versa.
+ *)
+let rec transpose = function
+   | [] 
+   | [] :: _ -> []
+   | rows  -> 
+       List.map List.hd rows :: transpose (List.map List.tl rows)
