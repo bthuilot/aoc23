@@ -76,7 +76,7 @@ let parse_condition_records (i : string) : condition_record list =
     | [row; groups] ->
        let chars = String.to_seq row |> List.of_seq in
        {
-         row = chars;h
+         row = chars;
          groups = parse_groups groups;
        }
     | _ -> failwith "Invalid input"
