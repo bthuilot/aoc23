@@ -2,7 +2,12 @@
 
     https://adventofcode.com/2023/day/8
 
-    This problem I started off by doing the (what i thought was) the
+    This one annoyed me a bit, since the "solution" to part 2 relies on
+    something that is not mentioned in the problem description, and a valid
+    input could be created that would break the solution. But ill get back to
+    this point.
+
+    I started off part 1 by doing the (what i thought was) the
     obvious thing: Hashmap of nodes to their left and right neighbors,
     and then a recursive function to navigate the network.  This
     worked fine for part 1, but part 2 was a bit more tricky. I first
@@ -17,6 +22,14 @@
     of instructions before reaching the end, I could just find the LCM of all of
     the starting nodes repeating patterns and that would be the number of steps
     it would take for all of them to reach the end at the same time.
+
+    This is where my annoyance with the problem comes in. The problem description
+    does not mention that all of the starting nodes have the same repeating pattern,
+    and that there is only one node that ends in Z in that pattern. If there were multiple nodes
+    that ended in Z in the pattern, or if the solution did not loop, the solution would not work.
+    I guess that its not unreasonable to assume that the solution has some hidden pattern, but
+    I wouldnt have thought to look for it if I hadnt noticed it while debugging.
+    Note for the future I guess
  *)
 
 (** [network] is a hashtable of nodes to their left and right neighbors *)

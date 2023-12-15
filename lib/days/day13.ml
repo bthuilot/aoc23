@@ -1,3 +1,5 @@
+open Utils
+
 (** Day 13: Point of Incidence
 
     https://adventofcode.com/2023/day/13
@@ -23,15 +25,6 @@
     I represents the "pattern" of the mirror.
  *)
 type mirror = char list list
-
-(** [transpose] transposes a matrix.
-    This is used to convert rows to columns and vice versa.
- *)
-let rec transpose = function
-   | [] 
-   | [] :: _ -> []
-   | rows    -> 
-       List.map List.hd rows :: transpose (List.map List.tl rows)
 
 (** [parse_mirrors] parses the input into a list of mirrors.
     Each mirror is a list of lists of chars.
