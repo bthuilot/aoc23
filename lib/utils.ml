@@ -27,4 +27,29 @@ let rec transpose = function
    | [] 
    | [] :: _ -> []
    | rows  -> 
-       List.map List.hd rows :: transpose (List.map List.tl rows)
+      List.map List.hd rows :: transpose (List.map List.tl rows)
+
+
+(** [rotate_clockwise] rotates a matrix clockwise.
+ *)
+let rotate_clockwise (matrix: 'a list list): 'a list list =
+  List.map List.rev (transpose matrix)
+
+(** [rotate_counterclockwise] rotates a matrix counterclockwise.
+ *)
+let rotate_counterclockwise (matrix: 'a list list): 'a list list =
+  List.rev (transpose matrix)
+
+(** [repeat f x n] applies [f] to [x] [n] times.
+    [repeat f x 0] is [x].
+    [repeat f x 1] is [f x].
+    [repeat f x 2] is [f (f x)].
+    [repeat f x 3] is [f (f (f x))].
+    etc.
+ *)
+let repeat f x n =
+  let rec repeat_aux f x n acc =
+    if n = 0 then acc
+    else repeat_aux f x (n - 1) (f acc)
+  in
+  repeat_aux f x n x
