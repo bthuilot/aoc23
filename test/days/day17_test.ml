@@ -30,7 +30,7 @@ let test_part2 () =
  
 let suite =
   [
-    (* "part1", `Quick, test_part1; *)
+    "part1", `Quick, test_part1;
     "part2", `Quick, test_part2;
   ]
 
