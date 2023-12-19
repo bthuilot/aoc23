@@ -250,29 +250,37 @@ let find_combinations (workflows: workflows): int =
          | A -> r.a
        in
        let (lower, upper) = value in
-       let new_pass_range = match c.f with
+       let create_new_range = assign_new_range r c.rating in
+       (* this next section is kinda just brain vomit *)
+       (* TLDR: for each comparision that it can be (> or <),
+          it performs 2 calls, one for if the range passes the comparision,
+          and one for if it fails the comparision.
+          It them merges the results of the two calls.
+        *)
+       let (passing, failing) = match c.f with
          | LessThan i ->
-            if i < lower then None else
-            Some (lower, min (i - 1) upper)
+            (* passing range *)
+            (if i < lower then [] else 
+                 let r = create_new_range (lower, min (i - 1) upper)
+                 in transition r c.state
+            ),
+            (* failing range *)
+            (if i > upper then [] else 
+                 let r = assign_new_range r c.rating (max i lower, upper)
+                 in find_ranges r rst
+            )
          | GreaterThan i ->
-            if i > upper then None else
-              Some (max (i + 1) lower, upper)
-       in
-       let new_fail_range = match c.f with
-         | LessThan i ->
-            if i > upper then None else
-              Some (max i lower, upper)
-         | GreaterThan i ->
-            if i < lower then None else
-              Some (lower, min i upper)
-       in
-       let passing = if Option.is_none new_pass_range then [] else
-                       let new_rs = assign_new_range r c.rating (Option.get new_pass_range) in
-                       transition new_rs c.state
-       in
-       let failing = if Option.is_none new_fail_range then [] else
-                       let new_rs = assign_new_range r c.rating (Option.get new_fail_range) in
-                       find_ranges new_rs rst
+            (* passing range *)
+            (if i > upper then [] else 
+                 let r = assign_new_range r c.rating (max (i + 1) lower, upper)
+                 in transition r c.state
+            ),
+            (* failing range *)
+            (if i < lower then [] else 
+                 let r = assign_new_range r c.rating (lower, min i upper)
+                 in find_ranges r rst
+            )
+
        in
        passing @ failing
   in
