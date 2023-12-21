@@ -1,3 +1,6 @@
+
+let part1_steps = ref 64
+
 class t =
   object (_)
     inherit Day_intf.t 21
