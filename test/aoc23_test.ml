@@ -21,4 +21,5 @@ let () =
       "Day 18", Day18_test.suite;
       "Day 19", Day19_test.suite;
       "Day 20", Day20_test.suite;
+      "Day 21", Day21_test.suite;
     ]
