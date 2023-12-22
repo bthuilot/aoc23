@@ -109,7 +109,9 @@ class t =
           h', l'
         ) (0, 0) (List.init 1000 (fun _ -> ())) in
       string_of_int (h * l)
-    method part2 (i : string) : string =
+    method part2 (_ : string) : string =
+      "Not Implemented"
+      (*
       let machine = parse_input i in
       let count = ref 0 in
       let found = ref false in
@@ -121,6 +123,7 @@ class t =
         h := h'; l := l'
       done;
       string_of_int !count
+       *)
   end
 
 
